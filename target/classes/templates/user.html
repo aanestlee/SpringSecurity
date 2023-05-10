@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>USER</title>
+</head>
+<body>
+<style>
+    body {
+        background-image: url("https://kartinkin.net/uploads/posts/2021-07/1626252641_31-kartinkin-com-p-fioletovii-fon-odnotonnii-nezhnii-krasivo-33.png"); /* Фоновый цвет и фоновый рисунок*/
+        color: #6A5ACD; /*Цвет текста на странице*/
+        background-attachment: fixed; /* Фон страницы фиксируется */
+        background-repeat: repeat-x; /* Изображение повторяется по горизонтали */
+    }
+</style>
+<h3> Привет, User!</h3>
+<table border="1">
+    <thead>
+    <tr>
+        <th>id_br</th>
+        <th>name_br</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="br : ${bri}">
+        <td style="text-align: center;" th:text="${br.idBr}"></td>
+        <td style="text-align: center;" th:text="${br.nameBr}"></td>
+
+    </tr>
+    </tbody>
+</table>
+<a href="/welcomelogin">Вернуться назад</a><br>
+<a href="/">Вернуться главную страницу</a><br>
+</body>
+</html>
