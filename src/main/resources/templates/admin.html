@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>USER</title>
+    <style>
+        body {
+            background-image: url("https://kartinkin.net/uploads/posts/2021-07/1626252641_31-kartinkin-com-p-fioletovii-fon-odnotonnii-nezhnii-krasivo-33.png"); /* Фоновый цвет и фоновый рисунок*/
+            color: #6A5ACD; /*Цвет текста на странице*/
+            background-attachment: fixed; /* Фон страницы фиксируется */
+            background-repeat: repeat-x; /* Изображение повторяется по горизонтали */
+        }
+    </style>
+</head>
+
+<body>
+<h3> Привет, Admin!</h3>
+<table border="1">
+    <thead>
+    <tr>
+        <th>id_prob</th>
+        <th>name_prob</th>
+        <th>nomer</th>
+        <th>id_br</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="prob : ${pro}">
+        <td style="text-align: center;" th:text="${prob.idProb}"></td>
+        <td style="text-align: center;" th:text="${prob.nameProb}"></td>
+        <td style="text-align: center;" th:text="${prob.nomer}"></td>
+        <td style="text-align: center;" th:text="${prob.idBr}"></td>
+    </tr>
+    </tbody>
+</table>
+<a href="/welcomelogin">Вернуться назад</a><br>
+<a href="/">Вернуться главную страницу</a><br><br>
+<a href="/users">Таблица пользователей</a><br>
+</body>
+</html>
